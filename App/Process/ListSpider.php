@@ -22,12 +22,11 @@ class ListSpider extends AbstractProcess
 
     public function run($arg)
     {
-        $driver = (new ChromeDriver())->getDriver();
-
         while (true)
         {
             try
             {
+                $driver = (new ChromeDriver(true))->getDriver();
                 $driver->get(self::API);
                 $listStr = $driver->getPageSource();
                 var_dump($listStr);
