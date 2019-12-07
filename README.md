@@ -8,6 +8,9 @@
 * Google Chrome 78.0.3904.108
 * ChromeDriver 78.0.3904.105
 
+### 代理
+* 站大爷
+
 ### 核心包
 * facebook/webdriver
 
