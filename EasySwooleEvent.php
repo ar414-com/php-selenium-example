@@ -27,6 +27,8 @@ class EasySwooleEvent implements Event
     {
         //更新代理池进程
         ServerManager::getInstance()->getSwooleServer()->addProcess((new \App\Process\UpdateProxyPool('UpdateProxyPool', []))->getProcess());
+        //列表爬取进程
+        ServerManager::getInstance()->getSwooleServer()->addProcess((new \App\Process\ListSpider('ListSpider', []))->getProcess());
     }
 
     public static function onRequest(Request $request, Response $response): bool

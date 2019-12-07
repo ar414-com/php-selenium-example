@@ -10,14 +10,16 @@ namespace App\Process;
 
 
 use App\Lib\Curl;
+use App\Lib\Kv;
 use EasySwoole\Component\Process\AbstractProcess;
 
 class UpdateProxyPool extends AbstractProcess
 {
 
+    //这里的代理IP都只支持socks5协议
     private $proxyListApi = "http://www.zdopen.com/ShortS5Proxy/GetIP/?api=%s&akey=%s&order=2&type=3";
     const PROXY_KV_KEY = 'spider:proxy:list';
-    const TIMER = 20; //20秒执行一次
+    const TIMER = 15;
 
     protected function initProxyListApi()
     {
@@ -38,24 +40,13 @@ class UpdateProxyPool extends AbstractProcess
                 if($ret['code'] == 10001 && isset($ret['data']['proxy_list']) && !empty($ret['data']['proxy_list']) ) {
                     foreach($ret['data']['proxy_list'] as $proxy) {
                         $proxyItem = $proxy['ip'] . ':'.$proxy['port'];
-                        $this->getRedis()->lPush(self::PROXY_KV_KEY,$proxyItem);
+                        Kv::redis()->lPush(self::PROXY_KV_KEY,$proxyItem);
                     }
                 }
             }
             sleep(self::TIMER);
         }
 
-    }
-
-    /**
-     * 方便演示，一般会封装一个KV类
-     * @return \Redis
-     */
-    protected function getRedis()
-    {
-        $redis = new \Redis();
-        $redis->connect('127.0.0.1',6379);
-        return $redis;
     }
 
 }
