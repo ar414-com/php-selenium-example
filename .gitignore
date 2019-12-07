@@ -1,0 +1,7 @@
+/Log/
+/Temp/
+.idea
+.env
+/Vendor/
+composer.lock
+easyswoole.install
