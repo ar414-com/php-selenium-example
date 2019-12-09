@@ -37,6 +37,4 @@ produce.php has already existed, do you want to replace it? [ Y / N (default) ] 
 //运行
 #php easyswoole start
 
-
-
 ````
