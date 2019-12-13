@@ -45,5 +45,5 @@ php ./vendor/easyswoole/easyswoole/bin/easyswoole install
 #修改App\Process\UpdateProxyPool，改成爬取你代理的逻辑，这里使用的是站大爷代理 提取链接马赛克了
 
 #运行
-#php easyswoole start
+php easyswoole start
 ````
