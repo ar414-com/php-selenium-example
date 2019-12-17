@@ -9,3 +9,8 @@
 * [启动Selenium Server](#b2)  
 * [运行示例代码](#b3)
 
+1、 <a id="b1">通过composer安装Selenium：</a>
+
+```` bash  
+[root@ar414.com Test]composer require facebook/webdriver  
+````
