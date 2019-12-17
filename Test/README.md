@@ -14,3 +14,8 @@
 ```` bash  
 [root@ar414.com Test]composer require facebook/webdriver  
 ````
+
+2、 <a id="b2">启动Selenium Server</a>  
+```` bash  
+[root@ar414.com Test] java -jar selenium-server-standalone-3.141.59.jar  
+````
