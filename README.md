@@ -5,9 +5,9 @@
 * 仅用于交流和学习，禁止利用本资源从事任何违反本国（地区）法律法规的活动，一切遵守《网络安全法》
 
 ### 教程
-1. [【PhpSelenium】1.环境安装](https://ar414-com.github.io/PhpSelenium/1-1/)
-2. [【PhpSelenium】2.基本使用](https://ar414-com.github.io/PhpSelenium/1-2/)
-3. [【PhpSelenium】3.定时爬虫+多任务爬虫+代理池](https://ar414-com.github.io/PhpSelenium/1-3/)
+* [【PhpSelenium】1.环境安装](https://ar414-com.github.io/PhpSelenium/1-1/)
+* [【PhpSelenium】2.基本使用](https://ar414-com.github.io/PhpSelenium/1-2/)
+* [【PhpSelenium】3.定时爬虫+多任务爬虫+代理池](https://ar414-com.github.io/PhpSelenium/1-3/)
 
 ### 运行环境
 * CentOS 7.2
